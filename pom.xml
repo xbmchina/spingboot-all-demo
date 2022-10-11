@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.xbmcloud</groupId>
+    <artifactId>springboot-all-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>actuator-demo</module>
+    </modules>
+    <packaging>pom</packaging>
+    <description>springboot模板</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <alibaba-fastjson-version>1.2.21</alibaba-fastjson-version>
+        <mybatis-generator-version>1.3.3</mybatis-generator-version>
+        <springfox-swagger-version>2.9.2</springfox-swagger-version>
+        <mysql-connector-java-version>5.1.38</mysql-connector-java-version>
+        <samplugin-version>1.0.0</samplugin-version>
+        <alibaba-druid-version>1.0.26</alibaba-druid-version>
+        <springfox-swagger-version>2.9.2</springfox-swagger-version>
+        <hutool-version>5.2.3</hutool-version>
+        <pagehelper-version>1.2.5</pagehelper-version>
+        <easyexcel-version>2.2.6</easyexcel-version>
+        <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+        <mybatisplus.version>3.4.1</mybatisplus.version>
+        <httpmime-version>4.5.12</httpmime-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

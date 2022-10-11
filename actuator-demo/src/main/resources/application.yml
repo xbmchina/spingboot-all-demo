@@ -1,0 +1,27 @@
+server:
+  port: 8804
+spring:
+  application:
+    name: my-actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #'prometheus,health'
+        exclude: "shutdown"
+      base-path: /actuator
+  endpoint:
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+        step: 1ms
+        descriptions: true
+    tags:
+      # 为指标设置一个Tag，这里设置为应用名，Tag是Prometheus提供的一种能力，从而实现更加灵活的筛选
+      application: ${spring.application.name}
+  health:
+    elasticsearch:
+      enabled: false
